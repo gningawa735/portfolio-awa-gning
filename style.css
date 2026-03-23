@@ -354,7 +354,7 @@ footer {
   }
 }
 
-/* Scroll offset (si jamais tu utilises des ancres plus tard) */
+/* (au cas où tu remettes un scroll par ancres plus tard) */
 #presentation,
 #competences,
 #projets,
