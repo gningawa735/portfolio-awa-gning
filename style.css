@@ -1,168 +1,152 @@
 body {
-    font-family: Arial, sans-serif;
-    background: #f8f4f6;
-    margin: 0;
-    color: #2a1c24;
+  font-family: Arial, sans-serif;
+  background: #f8f4f6;      /* fond très clair */
+  margin: 0;
+  color: #2a1c24;
 }
 
+/* Barre du haut */
+
 .top-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 16px 40px;
-    background: #f8f4f6;
-    position: sticky;
-    top: 0;
-    z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 40px;
+  background: #f8f4f6;
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
 
 .logo-texte {
-    font-weight: bold;
-    letter-spacing: 0.08em;
-    font-size: 0.9rem;
-}
-
-.top-nav nav {
-    display: flex;
-    flex-wrap: wrap;
+  font-weight: bold;
+  letter-spacing: 0.08em;
+  font-size: 0.9rem;
 }
 
 .top-nav a {
-    margin-left: 20px;
-    text-decoration: none;
-    color: #8a3055;
-    font-size: 0.9rem;
+  margin-left: 20px;
+  text-decoration: none;
+  color: #8a3055;
+  font-size: 0.9rem;
 }
 
-.top-nav a:hover {
-    text-decoration: underline;
-}
+/* Section héro : texte + photo */
 
 .hero {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    padding: 80px 120px;
-    gap: 80px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;  /* texte à gauche, photo à droite */
+  padding: 80px 120px;             /* plus d'espace sur les côtés */
+  gap: 80px;
 }
 
 .hero-texte {
-    flex: 1 1 280px;
-    max-width: 520px;
+  flex: 1 1 280px;
+  max-width: 520px;
 }
 
 .sur-titre {
-    text-transform: uppercase;
-    letter-spacing: 0.15em;
-    font-size: 0.8rem;
-    color: #8a3055;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-size: 0.8rem;
+  color: #8a3055;
 }
 
 .hero h1 {
-    font-size: 3.4rem;
-    margin: 12px 0 24px;
-    color: #8a3055;
+  font-size: 3.4rem;
+  margin: 12px 0 24px;
+  color: #8a3055;            /* bordeaux pour le nom */
 }
 
 .accroche {
-    font-size: 1.1rem;
-    line-height: 1.6;
-    margin-bottom: 16px;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 16px;
 }
 
 .hero-contact p {
-    margin: 8px 0;
+  margin: 8px 0;
 }
 
 .hero-contact a {
-    color: #8a3055;
-    text-decoration: none;
+  color: #8a3055;
+  text-decoration: none;
 }
 
 .hero-contact a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 .hero-photo {
-    flex: 0 0 320px;
-    text-align: center;
+  flex: 0 0 320px;
+  text-align: center;
 }
 
 .hero-photo img {
-    width: 320px;
-    height: 320px;
-    object-fit: cover;
-    border-radius: 12px;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  width: 320px;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
 }
+
+/* Blocs dessous */
 
 .bloc {
-    background: white;
-    margin: 20px auto 40px;
-    padding: 24px;
-    max-width: 900px;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  background: white;
+  margin: 20px auto 40px;
+  padding: 24px;
+  max-width: 900px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
 }
 
-.bloc:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
-}
-
-.bloc+.bloc {
-    margin-top: 10px;
+.bloc + .bloc {
+  margin-top: 10px;
 }
 
 .bloc h2 {
-    margin-top: 0;
-    color: #8a3055;
+  margin-top: 0;
+  color: #8a3055;
 }
 
 a {
-    color: #8a3055;
+  color: #8a3055;
 }
 
 a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
+
+/* Pour que le scroll avec le menu laisse de l'espace sous la barre */
 
 #presentation,
 #projets,
-#projet-pro,
+#experiences,
 #contact {
-    scroll-margin-top: 80px;
+  scroll-margin-top: 80px;
 }
 
+/* Responsive : sur petit écran, tout passe en colonne */
+
 @media (max-width: 768px) {
-    .top-nav {
-        flex-direction: column;
-        gap: 10px;
-        padding: 12px 16px;
-    }
+  .hero {
+    padding: 40px 20px;
+    justify-content: center;
+  }
 
-    .top-nav nav {
-        justify-content: center;
-    }
+  .hero h1 {
+    font-size: 2.3rem;
+  }
 
-    .top-nav a {
-        margin: 0 10px;
-    }
+  .hero-photo img {
+    width: 220px;
+    height: 220px;
+  }
 
-    .hero {
-        padding: 40px 20px;
-        justify-content: center;
-        gap: 30px;
-    }
-
-    .hero h1 {
-        font-size: 2.3rem;
-    }
-
-    .hero-photo img {
-        width: 220px;
-        height: 220px;
-    }
+  .top-nav {
+    padding: 12px 16px;
+  }
 }
