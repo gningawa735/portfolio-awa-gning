@@ -5,14 +5,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio – Awa Gning</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=DM+Sans:wght@400;500;600&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="style.css" />
+    //fonts.googleapis.com">
+    //fonts.gstatic.com" crossorigin>
+    //fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=DM+Sans:wght@400;500;600&display=swap"
+    rel="stylesheet">
+    " />
     <style>
-        /* Sections cachées par défaut */
         .section-page {
             display: none;
         }
@@ -22,12 +20,10 @@
             animation: fadeUp 0.5s ease both;
         }
 
-        /* Hero actif = flex */
         #presentation.active {
             display: flex;
         }
 
-        /* Lien nav actif */
         .top-nav nav a.active {
             color: var(--bordeaux);
             font-weight: 700;
@@ -38,16 +34,15 @@
 </head>
 
 <body>
-
     <header class="top-nav">
         <div class="logo-texte">Awa Gning</div>
         <nav>
-            <a href="#" onclick="showSection('presentation')" class="active">Présentation</a>
-            <a href="#" onclick="showSection('competences')">Compétences</a>
-            <a href="#" onclick="showSection('projets')">Projets</a>
-            <a href="#" onclick="showSection('experiences')">Expériences</a>
-            <a href="#" onclick="showSection('projet-pro')">Projet pro</a>
-            <a href="#" onclick="showSection('contact')">Contact</a>
+            <a href="#" onclick="showSection(event, 'presentation')" class="active">Présentation</a>
+            <a href="#" onclick="showSection(event, 'competences')">Compétences</a>
+            <a href="#" onclick="showSection(event, 'projets')">Projets</a>
+            <a href="#" onclick="showSection(event, 'experiences')">Expériences</a>
+            <a href="#" onclick="showSection(event, 'projet-pro')">Projet pro</a>
+            <a href="#" onclick="showSection(event, 'contact')">Contact</a>
         </nav>
     </header>
 
@@ -59,7 +54,7 @@
                 <p class="sur-titre">Hello, moi c'est</p>
                 <h1>Awa<br />Gning</h1>
                 <p class="accroche">
-                    Etudiante en Licence 3 Informatique à Bordeaux, je recherche une alternance
+                    Étudiante en Licence 3 Informatique à Bordeaux, je recherche une alternance
                     en développement web, support informatique ou systèmes d'information.
                 </p>
                 <div class="hero-badges">
@@ -76,8 +71,6 @@
             </div>
             <div class="hero-photo">
                 <img src="photo-awa.jpeg" alt="Photo Awa Gning" />
-
-
             </div>
         </section>
 
@@ -162,7 +155,7 @@
                 <div class="exp-item">
                     <div class="exp-dot"></div>
                     <div class="exp-content">
-                        <h3>Hotesse d'accueil - Pénélope Groupe / Stellantis You</h3>
+                        <h3>Hôtesse d'accueil - Pénélope Groupe / Stellantis You</h3>
                         <p class="exp-date">2026</p>
                         <p>Accueil clients, gestion des appels, tâches administratives. Logiciels : Service Box, Opera.
                         </p>
@@ -172,7 +165,7 @@
                 <div class="exp-item">
                     <div class="exp-dot"></div>
                     <div class="exp-content">
-                        <h3>Réceptionniste - Au Comte d'Ornon Hotel-Restaurant-Spa</h3>
+                        <h3>Réceptionniste - Au Comte d'Ornon Hôtel-Restaurant-Spa</h3>
                         <p class="exp-date">2026</p>
                         <p>Check-in/out, gestion des réservations et des paiements. Logiciel : Opera.</p>
                     </div>
@@ -203,12 +196,12 @@
         <section class="bloc section-page" id="projet-pro">
             <h2>Projet professionnel</h2>
             <p>
-                A court terme, je souhaite intégrer une équipe de développement web en alternance
+                À court terme, je souhaite intégrer une équipe de développement web en alternance
                 pour renforcer mes compétences en Java, Spring Boot, Vue.js et SQL, tout en découvrant
                 les bonnes pratiques d'un environnement professionnel.
             </p>
             <p>
-                A moyen terme, mon objectif est de devenir développeuse web polyvalente,
+                À moyen terme, mon objectif est de devenir développeuse web polyvalente,
                 capable de travailler sur le backend comme sur le frontend, avec une attention
                 particulière à la qualité du code et à l'expérience utilisateur.
             </p>
@@ -240,22 +233,18 @@
     </footer>
 
     <script>
-        function showSection(id) {
-            // Cacher toutes les sections
-            document.querySelectorAll('.section-page').forEach(s => s.classList.remove('active'));
+        function showSection(e, id) {
+            e.preventDefault();
 
-            // Afficher la section choisie
+            document.querySelectorAll('.section-page').forEach(s => s.classList.remove('active'));
             document.getElementById(id).classList.add('active');
 
-            // Mettre à jour le lien actif dans la nav
             document.querySelectorAll('.top-nav nav a').forEach(a => a.classList.remove('active'));
-            event.target.classList.add('active');
+            e.target.classList.add('active');
 
-            // Remonter en haut
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
     </script>
-
 </body>
 
 </html>

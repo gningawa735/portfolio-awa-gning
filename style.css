@@ -10,7 +10,11 @@
   --shadow: 0 4px 20px rgba(138, 48, 85, 0.10);
 }
 
-* { box-sizing: border-box; margin: 0; padding: 0; }
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
 body {
   font-family: 'DM Sans', sans-serif;
@@ -19,7 +23,7 @@ body {
   line-height: 1.6;
 }
 
-/* ── NAV ── */
+/* NAV */
 .top-nav {
   display: flex;
   justify-content: space-between;
@@ -48,9 +52,11 @@ body {
   transition: color 0.2s;
 }
 
-.top-nav nav a:hover { color: var(--bordeaux); }
+.top-nav nav a:hover {
+  color: var(--bordeaux);
+}
 
-/* ── HERO ── */
+/* HERO */
 .hero {
   display: flex;
   flex-wrap: wrap;
@@ -61,7 +67,10 @@ body {
   animation: fadeUp 0.7s ease both;
 }
 
-.hero-texte { flex: 1 1 280px; max-width: 540px; }
+.hero-texte {
+  flex: 1 1 280px;
+  max-width: 540px;
+}
 
 .sur-titre {
   text-transform: uppercase;
@@ -102,7 +111,11 @@ body {
   font-weight: 600;
 }
 
-.hero-contact { display: flex; flex-direction: column; gap: 6px; }
+.hero-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
 
 .hero-contact a {
   color: var(--bordeaux);
@@ -111,7 +124,10 @@ body {
   font-weight: 500;
 }
 
-.hero-contact a:hover { text-decoration: underline; }
+.hero-contact a:hover {
+  text-decoration: underline;
+}
+
 .hero-photo {
   flex: 0 0 260px;
   text-align: center;
@@ -143,7 +159,8 @@ body {
   box-shadow: 8px 8px 0px var(--bordeaux);
   border: 3px solid var(--bordeaux);
 }
-/* ── SECTIONS ── */
+
+/* SECTIONS */
 .bloc {
   background: var(--white);
   margin: 0 auto 28px;
@@ -163,7 +180,7 @@ body {
   border-bottom: 2px solid var(--bordeaux-pale);
 }
 
-/* ── COMPÉTENCES ── */
+/* COMPÉTENCES */
 .competences-grid {
   display: flex;
   flex-wrap: wrap;
@@ -186,7 +203,7 @@ body {
   transform: translateY(-2px);
 }
 
-/* ── PROJETS ── */
+/* PROJETS */
 .projets-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
@@ -235,10 +252,16 @@ body {
   text-decoration: none;
 }
 
-.projet-card a:hover { text-decoration: underline; }
+.projet-card a:hover {
+  text-decoration: underline;
+}
 
-/* ── EXPÉRIENCES ── */
-.timeline { display: flex; flex-direction: column; gap: 20px; }
+/* EXPÉRIENCES */
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
 
 .exp-item {
   display: flex;
@@ -273,13 +296,13 @@ body {
   color: var(--text-muted);
 }
 
-/* ── PROJET PRO ── */
+/* PROJET PRO / TEXTES */
 .bloc p {
   color: var(--text-muted);
   margin-bottom: 12px;
 }
 
-/* ── CONTACT ── */
+/* CONTACT */
 .contact-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -306,9 +329,12 @@ body {
   transform: translateY(-2px);
 }
 
-.contact-link span { color: var(--bordeaux); font-size: 1.2rem; }
+.contact-link span {
+  color: var(--bordeaux);
+  font-size: 1.2rem;
+}
 
-/* ── FOOTER ── */
+/* FOOTER */
 footer {
   text-align: center;
   padding: 36px;
@@ -316,23 +342,57 @@ footer {
   color: var(--text-muted);
 }
 
-/* ── ANIMATION ── */
+/* ANIMATION */
 @keyframes fadeUp {
-  from { opacity: 0; transform: translateY(24px); }
-  to   { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-/* Scroll offset pour la nav sticky */
-#presentation, #competences, #projets, #experiences, #projet-pro, #contact {
+/* Scroll offset (si jamais tu utilises des ancres plus tard) */
+#presentation,
+#competences,
+#projets,
+#experiences,
+#projet-pro,
+#contact {
   scroll-margin-top: 80px;
 }
 
-/* ── RESPONSIVE ── */
+/* RESPONSIVE */
 @media (max-width: 768px) {
-  .hero { padding: 40px 20px; justify-content: center; text-align: center; }
-  .hero h1 { font-size: 2.6rem; }
-  .hero-photo img, .photo-placeholder { width: 200px; height: 200px; }
-  .top-nav { padding: 12px 16px; }
-  .top-nav nav a { margin-left: 12px; font-size: 0.8rem; }
-  .bloc { padding: 24px 20px; margin: 0 12px 20px; }
+  .hero {
+    padding: 40px 20px;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .hero h1 {
+    font-size: 2.6rem;
+  }
+
+  .hero-photo img,
+  .photo-placeholder {
+    width: 200px;
+    height: 200px;
+  }
+
+  .top-nav {
+    padding: 12px 16px;
+  }
+
+  .top-nav nav a {
+    margin-left: 12px;
+    font-size: 0.8rem;
+  }
+
+  .bloc {
+    padding: 24px 20px;
+    margin: 0 12px 20px;
+  }
 }
