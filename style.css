@@ -36,14 +36,14 @@ body {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: center;
-  padding: 60px 40px;
-  gap: 60px;
+  justify-content: space-between;  /* texte à gauche, photo à droite */
+  padding: 80px 120px;             /* plus d'espace sur les côtés */
+  gap: 80px;
 }
 
 .hero-texte {
   flex: 1 1 280px;
-  max-width: 480px;
+  max-width: 520px;
 }
 
 .sur-titre {
@@ -54,14 +54,15 @@ body {
 }
 
 .hero h1 {
-  font-size: 3rem;
-  margin: 10px 0 20px;
+  font-size: 3.4rem;
+  margin: 12px 0 24px;
   color: #8a3055;            /* bordeaux pour le nom */
 }
 
 .accroche {
   font-size: 1.1rem;
   line-height: 1.6;
+  margin-bottom: 16px;
 }
 
 .hero-contact p {
@@ -78,13 +79,13 @@ body {
 }
 
 .hero-photo {
-  flex: 0 0 260px;
+  flex: 0 0 320px;
   text-align: center;
 }
 
 .hero-photo img {
-  width: 260px;
-  height: 260px;
+  width: 320px;
+  height: 320px;
   object-fit: cover;
   border-radius: 12px;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
@@ -119,6 +120,7 @@ a:hover {
 @media (max-width: 768px) {
   .hero {
     padding: 40px 20px;
+    justify-content: center;
   }
 
   .hero h1 {
