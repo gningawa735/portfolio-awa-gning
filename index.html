@@ -1,252 +1,261 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfolio – Awa Gning</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
-  <style>
-    /* Sections cachées par défaut */
-    .section-page {
-      display: none;
-    }
-    .section-page.active {
-      display: block;
-      animation: fadeUp 0.5s ease both;
-    }
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio – Awa Gning</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=DM+Sans:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+    <style>
+        /* Sections cachées par défaut */
+        .section-page {
+            display: none;
+        }
 
-    /* Hero actif = flex */
-    #presentation.active {
-      display: flex;
-    }
+        .section-page.active {
+            display: block;
+            animation: fadeUp 0.5s ease both;
+        }
 
-    /* Lien nav actif */
-    .top-nav nav a.active {
-      color: var(--bordeaux);
-      font-weight: 700;
-      border-bottom: 2px solid var(--bordeaux);
-      padding-bottom: 2px;
-    }
-  </style>
+        /* Hero actif = flex */
+        #presentation.active {
+            display: flex;
+        }
+
+        /* Lien nav actif */
+        .top-nav nav a.active {
+            color: var(--bordeaux);
+            font-weight: 700;
+            border-bottom: 2px solid var(--bordeaux);
+            padding-bottom: 2px;
+        }
+    </style>
 </head>
+
 <body>
 
-  <header class="top-nav">
-    <div class="logo-texte">Awa Gning</div>
-    <nav>
-      <a href="#" onclick="showSection('presentation')" class="active">Présentation</a>
-      <a href="#" onclick="showSection('competences')">Compétences</a>
-      <a href="#" onclick="showSection('projets')">Projets</a>
-      <a href="#" onclick="showSection('experiences')">Expériences</a>
-      <a href="#" onclick="showSection('projet-pro')">Projet pro</a>
-      <a href="#" onclick="showSection('contact')">Contact</a>
-    </nav>
-  </header>
+    <header class="top-nav">
+        <div class="logo-texte">Awa Gning</div>
+        <nav>
+            <a href="#" onclick="showSection('presentation')" class="active">Présentation</a>
+            <a href="#" onclick="showSection('competences')">Compétences</a>
+            <a href="#" onclick="showSection('projets')">Projets</a>
+            <a href="#" onclick="showSection('experiences')">Expériences</a>
+            <a href="#" onclick="showSection('projet-pro')">Projet pro</a>
+            <a href="#" onclick="showSection('contact')">Contact</a>
+        </nav>
+    </header>
 
-  <main>
+    <main>
 
-    <!-- PRÉSENTATION -->
-    <section class="hero section-page active" id="presentation">
-      <div class="hero-texte">
-        <p class="sur-titre">Hello, moi c'est</p>
-        <h1>Awa<br />Gning</h1>
-        <p class="accroche">
-          Etudiante en Licence 3 Informatique à Bordeaux, je recherche une alternance
-          en développement web, support informatique ou systèmes d'information.
-        </p>
-        <div class="hero-badges">
-          <span class="badge-lang">Français</span>
-          <span class="badge-lang">Anglais</span>
-          <span class="badge-lang">Espagnol</span>
-        </div>
-        <div class="hero-contact">
-          <a href="mailto:gningawa735@gmail.com">gningawa735@gmail.com</a>
-          <a href="tel:0623776548">06 23 77 65 48</a>
-          <a href="https://github.com/gningawa735" target="_blank">github.com/gningawa735</a>
-          <a href="https://www.linkedin.com" target="_blank">Mon profil LinkedIn</a>
-        </div>
-      </div>
-      <div class="hero-photo">
-        <!-- <img src="photo-awa.jpeg" alt="Photo Awa Gning" /> -->
-        <div class="photo-placeholder">AG</div>
-      </div>
-    </section>
+        <!-- PRÉSENTATION -->
+        <section class="hero section-page active" id="presentation">
+            <div class="hero-texte">
+                <p class="sur-titre">Hello, moi c'est</p>
+                <h1>Awa<br />Gning</h1>
+                <p class="accroche">
+                    Etudiante en Licence 3 Informatique à Bordeaux, je recherche une alternance
+                    en développement web, support informatique ou systèmes d'information.
+                </p>
+                <div class="hero-badges">
+                    <span class="badge-lang">Français</span>
+                    <span class="badge-lang">Anglais</span>
+                    <span class="badge-lang">Espagnol</span>
+                </div>
+                <div class="hero-contact">
+                    <a href="mailto:gningawa735@gmail.com">gningawa735@gmail.com</a>
+                    <a href="tel:0623776548">06 23 77 65 48</a>
+                    <a href="https://github.com/gningawa735" target="_blank">github.com/gningawa735</a>
+                    <a href="https://www.linkedin.com" target="_blank">Mon profil LinkedIn</a>
+                </div>
+            </div>
+            <div class="hero-photo">
+                <img src="photo-awa.jpeg" alt="Photo Awa Gning" />
 
-    <!-- COMPÉTENCES -->
-    <section class="bloc section-page" id="competences">
-      <h2>Compétences techniques</h2>
-      <div class="competences-grid">
-        <span class="skill-tag">HTML / CSS</span>
-        <span class="skill-tag">JavaScript</span>
-        <span class="skill-tag">TypeScript</span>
-        <span class="skill-tag">Vue.js</span>
-        <span class="skill-tag">Java</span>
-        <span class="skill-tag">Spring Boot</span>
-        <span class="skill-tag">API REST</span>
-        <span class="skill-tag">SQL</span>
-        <span class="skill-tag">PostgreSQL</span>
-        <span class="skill-tag">Git</span>
-        <span class="skill-tag">Linux</span>
-        <span class="skill-tag">Maven</span>
-        <span class="skill-tag">VS Code</span>
-        <span class="skill-tag">Postman</span>
-        <span class="skill-tag">JUnit / Mockito</span>
-        <span class="skill-tag">OCaml</span>
-      </div>
-    </section>
 
-    <!-- PROJETS -->
-    <section class="bloc section-page" id="projets">
-      <h2>Projets réalisés</h2>
-      <div class="projets-grid">
+            </div>
+        </section>
 
-        <div class="projet-card">
-          <h3>Application de traitement d'images</h3>
-          <div class="tech-tags">
-            <span class="tech-tag">Spring Boot</span>
-            <span class="tech-tag">PostgreSQL</span>
-            <span class="tech-tag">Vue.js</span>
-            <span class="tech-tag">TypeScript</span>
-            <span class="tech-tag">JUnit</span>
-          </div>
-          <p class="projet-desc">API REST complète, base de données, frontend et tests unitaires.</p>
-          <a href="https://github.com/gningawa735/Image-prcessing-app" target="_blank">Voir sur GitHub</a>
-        </div>
+        <!-- COMPÉTENCES -->
+        <section class="bloc section-page" id="competences">
+            <h2>Compétences techniques</h2>
+            <div class="competences-grid">
+                <span class="skill-tag">HTML / CSS</span>
+                <span class="skill-tag">JavaScript</span>
+                <span class="skill-tag">TypeScript</span>
+                <span class="skill-tag">Vue.js</span>
+                <span class="skill-tag">Java</span>
+                <span class="skill-tag">Spring Boot</span>
+                <span class="skill-tag">API REST</span>
+                <span class="skill-tag">SQL</span>
+                <span class="skill-tag">PostgreSQL</span>
+                <span class="skill-tag">Git</span>
+                <span class="skill-tag">Linux</span>
+                <span class="skill-tag">Maven</span>
+                <span class="skill-tag">VS Code</span>
+                <span class="skill-tag">Postman</span>
+                <span class="skill-tag">JUnit / Mockito</span>
+                <span class="skill-tag">OCaml</span>
+            </div>
+        </section>
 
-        <div class="projet-card">
-          <h3>Site web dynamique</h3>
-          <div class="tech-tags">
-            <span class="tech-tag">HTML</span>
-            <span class="tech-tag">CSS</span>
-            <span class="tech-tag">JavaScript</span>
-          </div>
-          <p class="projet-desc">Création d'un site avec fonctionnalités interactives.</p>
-          <a href="https://github.com/gningawa735/cv-awa-gning" target="_blank">Voir sur GitHub</a>
-        </div>
+        <!-- PROJETS -->
+        <section class="bloc section-page" id="projets">
+            <h2>Projets réalisés</h2>
+            <div class="projets-grid">
 
-        <div class="projet-card">
-          <h3>Tetris en OCaml</h3>
-          <div class="tech-tags">
-            <span class="tech-tag">OCaml</span>
-          </div>
-          <p class="projet-desc">Implémentation complète des règles du jeu, travail en équipe et tests.</p>
-        </div>
+                <div class="projet-card">
+                    <h3>Application de traitement d'images</h3>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Spring Boot</span>
+                        <span class="tech-tag">PostgreSQL</span>
+                        <span class="tech-tag">Vue.js</span>
+                        <span class="tech-tag">TypeScript</span>
+                        <span class="tech-tag">JUnit</span>
+                    </div>
+                    <p class="projet-desc">API REST complète, base de données, frontend et tests unitaires.</p>
+                    <a href="https://github.com/gningawa735/Image-prcessing-app" target="_blank">Voir sur GitHub</a>
+                </div>
 
-        <div class="projet-card">
-          <h3>Interpréteur Lex et Yacc</h3>
-          <div class="tech-tags">
-            <span class="tech-tag">Lex</span>
-            <span class="tech-tag">Yacc</span>
-          </div>
-          <p class="projet-desc">Définition de la grammaire, analyse syntaxique et construction d'un interpréteur.</p>
-        </div>
+                <div class="projet-card">
+                    <h3>Site web dynamique</h3>
+                    <div class="tech-tags">
+                        <span class="tech-tag">HTML</span>
+                        <span class="tech-tag">CSS</span>
+                        <span class="tech-tag">JavaScript</span>
+                    </div>
+                    <p class="projet-desc">Création d'un site avec fonctionnalités interactives.</p>
+                    <a href="https://github.com/gningawa735/cv-awa-gning" target="_blank">Voir sur GitHub</a>
+                </div>
 
-      </div>
-    </section>
+                <div class="projet-card">
+                    <h3>Tetris en OCaml</h3>
+                    <div class="tech-tags">
+                        <span class="tech-tag">OCaml</span>
+                    </div>
+                    <p class="projet-desc">Implémentation complète des règles du jeu, travail en équipe et tests.</p>
+                </div>
 
-    <!-- EXPÉRIENCES -->
-    <section class="bloc section-page" id="experiences">
-      <h2>Expériences professionnelles</h2>
-      <div class="timeline">
+                <div class="projet-card">
+                    <h3>Interpréteur Lex et Yacc</h3>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Lex</span>
+                        <span class="tech-tag">Yacc</span>
+                    </div>
+                    <p class="projet-desc">Définition de la grammaire, analyse syntaxique et construction d'un
+                        interpréteur.</p>
+                </div>
 
-        <div class="exp-item">
-          <div class="exp-dot"></div>
-          <div class="exp-content">
-            <h3>Hotesse d'accueil - Pénélope Groupe / Stellantis You</h3>
-            <p class="exp-date">2026</p>
-            <p>Accueil clients, gestion des appels, tâches administratives. Logiciels : Service Box, Opera.</p>
-          </div>
-        </div>
+            </div>
+        </section>
 
-        <div class="exp-item">
-          <div class="exp-dot"></div>
-          <div class="exp-content">
-            <h3>Réceptionniste - Au Comte d'Ornon Hotel-Restaurant-Spa</h3>
-            <p class="exp-date">2026</p>
-            <p>Check-in/out, gestion des réservations et des paiements. Logiciel : Opera.</p>
-          </div>
-        </div>
+        <!-- EXPÉRIENCES -->
+        <section class="bloc section-page" id="experiences">
+            <h2>Expériences professionnelles</h2>
+            <div class="timeline">
 
-        <div class="exp-item">
-          <div class="exp-dot"></div>
-          <div class="exp-content">
-            <h3>Réceptionniste - Hotel F1</h3>
-            <p class="exp-date">2023 - 2025</p>
-            <p>Accueil, réservations, caisse. Logiciel : FOLS.</p>
-          </div>
-        </div>
+                <div class="exp-item">
+                    <div class="exp-dot"></div>
+                    <div class="exp-content">
+                        <h3>Hotesse d'accueil - Pénélope Groupe / Stellantis You</h3>
+                        <p class="exp-date">2026</p>
+                        <p>Accueil clients, gestion des appels, tâches administratives. Logiciels : Service Box, Opera.
+                        </p>
+                    </div>
+                </div>
 
-        <div class="exp-item">
-          <div class="exp-dot"></div>
-          <div class="exp-content">
-            <h3>Serveuse - Holly Diner</h3>
-            <p class="exp-date">2022 - 2024</p>
-            <p>Service client et encaissements.</p>
-          </div>
-        </div>
+                <div class="exp-item">
+                    <div class="exp-dot"></div>
+                    <div class="exp-content">
+                        <h3>Réceptionniste - Au Comte d'Ornon Hotel-Restaurant-Spa</h3>
+                        <p class="exp-date">2026</p>
+                        <p>Check-in/out, gestion des réservations et des paiements. Logiciel : Opera.</p>
+                    </div>
+                </div>
 
-      </div>
-    </section>
+                <div class="exp-item">
+                    <div class="exp-dot"></div>
+                    <div class="exp-content">
+                        <h3>Réceptionniste - Hotel F1</h3>
+                        <p class="exp-date">2023 - 2025</p>
+                        <p>Accueil, réservations, caisse. Logiciel : FOLS.</p>
+                    </div>
+                </div>
 
-    <!-- PROJET PRO -->
-    <section class="bloc section-page" id="projet-pro">
-      <h2>Projet professionnel</h2>
-      <p>
-        A court terme, je souhaite intégrer une équipe de développement web en alternance
-        pour renforcer mes compétences en Java, Spring Boot, Vue.js et SQL, tout en découvrant
-        les bonnes pratiques d'un environnement professionnel.
-      </p>
-      <p>
-        A moyen terme, mon objectif est de devenir développeuse web polyvalente,
-        capable de travailler sur le backend comme sur le frontend, avec une attention
-        particulière à la qualité du code et à l'expérience utilisateur.
-      </p>
-    </section>
+                <div class="exp-item">
+                    <div class="exp-dot"></div>
+                    <div class="exp-content">
+                        <h3>Serveuse - Holly Diner</h3>
+                        <p class="exp-date">2022 - 2024</p>
+                        <p>Service client et encaissements.</p>
+                    </div>
+                </div>
 
-    <!-- CONTACT -->
-    <section class="bloc section-page" id="contact">
-      <h2>Contact</h2>
-      <div class="contact-grid">
-        <a class="contact-link" href="mailto:gningawa735@gmail.com">
-          <span>Email</span> gningawa735@gmail.com
-        </a>
-        <a class="contact-link" href="tel:0623776548">
-          <span>Tel</span> 06 23 77 65 48
-        </a>
-        <a class="contact-link" href="https://github.com/gningawa735" target="_blank">
-          <span>GitHub</span> github.com/gningawa735
-        </a>
-        <a class="contact-link" href="https://www.linkedin.com" target="_blank">
-          <span>LinkedIn</span> Mon profil
-        </a>
-      </div>
-    </section>
+            </div>
+        </section>
 
-  </main>
+        <!-- PROJET PRO -->
+        <section class="bloc section-page" id="projet-pro">
+            <h2>Projet professionnel</h2>
+            <p>
+                A court terme, je souhaite intégrer une équipe de développement web en alternance
+                pour renforcer mes compétences en Java, Spring Boot, Vue.js et SQL, tout en découvrant
+                les bonnes pratiques d'un environnement professionnel.
+            </p>
+            <p>
+                A moyen terme, mon objectif est de devenir développeuse web polyvalente,
+                capable de travailler sur le backend comme sur le frontend, avec une attention
+                particulière à la qualité du code et à l'expérience utilisateur.
+            </p>
+        </section>
 
-  <footer>
-    <p>2026 Awa Gning - Portfolio</p>
-  </footer>
+        <!-- CONTACT -->
+        <section class="bloc section-page" id="contact">
+            <h2>Contact</h2>
+            <div class="contact-grid">
+                <a class="contact-link" href="mailto:gningawa735@gmail.com">
+                    <span>Email</span> gningawa735@gmail.com
+                </a>
+                <a class="contact-link" href="tel:0623776548">
+                    <span>Tel</span> 06 23 77 65 48
+                </a>
+                <a class="contact-link" href="https://github.com/gningawa735" target="_blank">
+                    <span>GitHub</span> github.com/gningawa735
+                </a>
+                <a class="contact-link" href="https://www.linkedin.com" target="_blank">
+                    <span>LinkedIn</span> Mon profil
+                </a>
+            </div>
+        </section>
 
-  <script>
-    function showSection(id) {
-      // Cacher toutes les sections
-      document.querySelectorAll('.section-page').forEach(s => s.classList.remove('active'));
+    </main>
 
-      // Afficher la section choisie
-      document.getElementById(id).classList.add('active');
+    <footer>
+        <p>2026 Awa Gning - Portfolio</p>
+    </footer>
 
-      // Mettre à jour le lien actif dans la nav
-      document.querySelectorAll('.top-nav nav a').forEach(a => a.classList.remove('active'));
-      event.target.classList.add('active');
+    <script>
+        function showSection(id) {
+            // Cacher toutes les sections
+            document.querySelectorAll('.section-page').forEach(s => s.classList.remove('active'));
 
-      // Remonter en haut
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-  </script>
+            // Afficher la section choisie
+            document.getElementById(id).classList.add('active');
+
+            // Mettre à jour le lien actif dans la nav
+            document.querySelectorAll('.top-nav nav a').forEach(a => a.classList.remove('active'));
+            event.target.classList.add('active');
+
+            // Remonter en haut
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
 
 </body>
+
 </html>
