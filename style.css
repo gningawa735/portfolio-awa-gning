@@ -15,6 +15,7 @@ body {
   background: #f8f4f6;
   position: sticky;
   top: 0;
+  z-index: 10;
 }
 
 .logo-texte {
@@ -102,6 +103,10 @@ body {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
 }
 
+.bloc + .bloc {
+  margin-top: 10px;
+}
+
 .bloc h2 {
   margin-top: 0;
   color: #8a3055;
@@ -113,6 +118,15 @@ a {
 
 a:hover {
   text-decoration: underline;
+}
+
+/* Pour que le scroll avec le menu laisse de l'espace sous la barre */
+
+#presentation,
+#projets,
+#projet-pro,
+#contact {
+  scroll-margin-top: 80px;
 }
 
 /* Responsive : sur petit écran, tout passe en colonne */
@@ -130,5 +144,9 @@ a:hover {
   .hero-photo img {
     width: 220px;
     height: 220px;
+  }
+
+  .top-nav {
+    padding: 12px 16px;
   }
 }
