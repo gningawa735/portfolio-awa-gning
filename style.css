@@ -112,22 +112,26 @@ body {
 }
 
 .hero-contact a:hover { text-decoration: underline; }
-
-.hero-photo { flex: 0 0 300px; text-align: center; }
+.hero-photo {
+  flex: 0 0 260px;
+  text-align: center;
+}
 
 .hero-photo img {
-  width: 300px;
-  height: 300px;
+  width: 260px;
+  height: 340px;
   object-fit: cover;
-  border-radius: 50%;
-  box-shadow: 0 8px 40px rgba(138, 48, 85, 0.25);
-  border: 4px solid var(--white);
+  object-position: top center;
+  border-radius: 20px;
+  box-shadow: 8px 8px 0px var(--bordeaux);
+  border: 3px solid var(--bordeaux);
+  display: block;
 }
 
 .photo-placeholder {
-  width: 300px;
-  height: 300px;
-  border-radius: 50%;
+  width: 260px;
+  height: 340px;
+  border-radius: 20px;
   background: var(--bordeaux-pale);
   display: flex;
   align-items: center;
@@ -136,10 +140,9 @@ body {
   font-size: 4rem;
   color: var(--bordeaux);
   margin: 0 auto;
-  box-shadow: 0 8px 40px rgba(138, 48, 85, 0.25);
-  border: 4px solid var(--white);
+  box-shadow: 8px 8px 0px var(--bordeaux);
+  border: 3px solid var(--bordeaux);
 }
-
 /* ── SECTIONS ── */
 .bloc {
   background: var(--white);
